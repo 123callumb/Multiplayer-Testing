@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test Game</title>
+    <style media="screen">
+      body {
+        background-color: rgb(60, 60, 60);
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      #holder {
+        width: 100%;
+        text-align: center;
+      }
+      #canvas {
+        display: inline;
+        background-image: url('client/res/daySky.png');
+        background-size: 100% 100%;
+        border: 4px solid rgb(240,240,240);
+        width: 1024px;
+        height: 720px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="holder">
+      <canvas id="canvas" width="1024px" height="720px"></canvas>
+      <br>
+      <input type="text" name="playerName" placeholder="Player Name" id="playerName"></input>
+      <button type="button" id="connectBtn">Connect</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="client/js/connection.js"></script>
+    <script type="text/javascript" src="client/js/eventManager.js"></script>
+  </body>
+</html>
